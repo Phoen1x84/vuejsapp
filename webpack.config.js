@@ -14,6 +14,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.css$/,
         use: [
           {loader: 'style-loader'},
@@ -27,13 +36,22 @@ module.exports = {
       }
     ],
   },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin() // Enable HMR
+    new webpack.HotModuleReplacementPlugin(), // Enable HMR
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     NODE_ENV: '"production"'
+    //   }}
+    // )
   ],
   devServer: {
     contentBase: path.join(__dirname, './'),
-    compress: true,
-    port: 9000,
+    compress: false,
     hot: true,
     //publicPath: '/'
   }

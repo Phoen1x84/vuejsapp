@@ -1,3 +1,6 @@
+import Vue from 'vue';
+import Banner from './components/banner';
+
 Vue.component('list', {
   props: ['todo'],
   template: '<li>{{todo.text}}</li>'
