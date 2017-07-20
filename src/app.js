@@ -10,7 +10,8 @@ var app = new Vue({
     groceryList: [
       {id: 0, text: 'item 1'},
       {id: 1, text: 'item 2'},
-      {id: 2, text: 'item 3'}
+      {id: 2, text: 'item 3'},
+      {id: 3, text: 'item 4'}
     ]
   }
 });

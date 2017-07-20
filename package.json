@@ -1,0 +1,26 @@
+{
+  "name": "vuejsapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-dev-server --open",
+    "build:prod": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phoen1x84/vuejsapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phoen1x84/vuejsapp/issues"
+  },
+  "homepage": "https://github.com/Phoen1x84/vuejsapp#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
